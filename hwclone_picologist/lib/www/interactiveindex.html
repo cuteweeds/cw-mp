@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Leila's Lil Bug, a Very Small Server!</title>
+		<style>
+			:root {
+				--bgcolor: paleturquoise;
+			}
+			body {
+				background-color: var(--bgcolor);
+				padding: 20px;
+			}
+			form input {
+				margin-top: 10px;
+			}
+			.demo-image {
+			  display: block;
+			}
+			table {
+				
+				align-content: left;
+			}
+			.left {
+				width: 80px;
+				text-align: left;
+			}
+			.right {
+				text-align: left;
+			}
+			.caption {
+				text-indent: 20px;
+			}
+		</style>
+		<script src="https://stacksnippets.net/scripts/snippet-javascript-console.min.js?v=1"></script>
+		<script>
+		// Get the root element
+		var r = document.querySelector(':root');
+		var other_color = "lightgoldenrodyellow";
+
+		// Create a function for setting a variable value
+		function lightswitch() {
+		  // Set the value of variable --blue to another value (in this case "lightblue")
+			var rs = getComputedStyle(r);
+			var old_color = rs.getPropertyValue('--bgcolor');
+			var new_color = other_color
+			r.style.setProperty('--bgcolor', new_color);
+			other_color = old_color
+		}
+</script>
+	</head>
+	<body>
+		<h1>THIS IS LEILA'S LIL BUG!</h1>
+		<p>Howdy! This server is just a little guy!</p>
+		<p><a href="index.html">click here for the real party</a></p>
+		<img class="demo-image" src="https://cdn11.bigcommerce.com/s-am5zt8xfow/images/stencil/1280x1280/products/2967/9042/PICO_W_HERO_TRANSPARENT__41312.1656080321.png" width=360px>
+		<p class="caption">^ is me :3</p>
+		<h3>Lil weather-o</h3>
+		<p>Temp: {bmp280_temp} degrees Celsius<br/>
+		Pres.: {bmp280_baro} bar<br/>
+		Moisture 1: {water_lvl1}%<br/>
+		Moisture 2: {water_lvl2}%</p>
+		<table>
+			<tr>
+				<td class="left">
+					<form action="./led_on">
+						<input type="submit" value="led_on " onclick="lightswitch()"/>
+					</form>
+				</td>
+				<td class="left">
+       				<form action="./led_off">
+    					<input type="submit" value="led_off" onclick="lightswitch()"/>
+       				</form>
+       			</td>
+       			<td class="left">
+       				<button class="lightswitch" onclick="lightswitch()">Repaint the website</button>
+       			</td>
+	       	</tr>
+        </table>
+
+        <h2>A test of my powers?</h2>
+        <p>I just generated the image below using my AI, which is real, don't look at the source code.</p>
+        <img class="demo-image" src="https://picsum.photos/200/300">
+		<button class="refresh-button" onclick="alert('Generating AI image, yup, definitely AI.')">Don't Push</button>
+		<script>
+			const refreshButton = document.querySelector('.refresh-button');
+			const refreshPage = () => {
+			  location.reload();
+			}
+		refreshButton.addEventListener('click', refreshPage)
+		</script>
+	</body>
+</html>

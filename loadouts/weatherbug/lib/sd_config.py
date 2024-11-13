@@ -1,0 +1,4 @@
+SCK = 10
+PICO = 11
+POCI = 12
+CS = 13

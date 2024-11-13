@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Lil BUG TIME PLANT TIME BUG BUG YEAH</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<script src="https://kit.fontawesome.com/dddcfdea04.js" crossorigin=""></script>
+<style>
+html,body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
+.pad-right{padding-right:1em}
+</style>
+</head>
+<body class="w3-light-grey">
+<!-- Top container -->
+<div class="w3-bar w3-top w3-black w3-large" style="z-index:4">
+  <button class="w3-bar-item w3-button w3-hide-large w3-hover-none w3-hover-text-light-grey" onclick="w3_open();"><i class="fa fa-bars"></i>  Menu</button>
+  <span class="w3-bar-item w3-button w3-padding">  picologist</span>
+  <span class="w3-bar-item w3-right">Logo</span>
+</div>
+<!-- Sidebar/menu -->
+<nav class="w3-sidebar w3-collapse w3-white w3-animate-left" style="z-index:3;width:300px;" id="mySidebar"><br>
+  <div class="w3-container w3-row">
+    <div class="w3-col s4">
+      <img class="w3-card w3-circle" src="https://avatars.githubusercontent.com/u/105590544?s=46&v=4" class="w3-circle w3-margin-right" style="width:46px">
+    </div>
+    <div class="w3-col s8 w3-bar">
+      <span>Welcome, <strong>DirtDoula42069</strong></span><br>
+      <a href="#" class="w3-bar-item w3-button"><i class="fa fa-envelope"></i></a>
+      <a href="#" class="w3-bar-item w3-button"><i class="fa fa-user"></i></a>
+      <a href="#" class="w3-bar-item w3-button"><i class="fa fa-cog"></i></a>
+    </div>
+  </div>
+  <hr>
+  <div class="w3-container">
+    <h5>Dashboard</h5>
+    <i>(doesn't do anything yet)</i>
+  </div>
+  <div class="w3-bar-block">
+    <a href="#" class="w3-bar-item w3-button w3-padding-16 w3-hide-large w3-dark-grey w3-hover-black" onclick="w3_close()" title="close menu"><i class="fa fa-remove fa-fw"></i>  Close Menu</a>
+    <a href="#" class="w3-bar-item w3-button w3-padding w3-blue"><i class="fa fa-users fa-fw"></i>  Overview</a>
+    <a href="#" class="w3-bar-item w3-button w3-padding"><i class="fa fa-cog fa-fw"></i>  Settings</a><br><br>
+  </div>
+</nav>
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+<!-- !PAGE CONTENT! -->
+<div class="w3-main" style="margin-left:300px;margin-top:43px;">
+  <!-- Header -->
+  <header class="w3-container" style="padding-top:22px">
+    <h5><b><i class="fa fa-dashboard"></i> what's the latest</b>
+      <span class="w3-right"><i>as of:</i> {date}, {hour} 
+      <a href="javascript:location.reload(true)">(refresh)</a>
+</span></h5>
+  </header>
+  <div class="w3-row-padding"> <!-- w3-margin-bottom"> -->
+    <div class="w3-quarter">
+      <div class="w3-container w3-red w3-padding-16">
+        <div class="w3-left"><i class="fa fa-thermometer-2 w3-xxxlarge"></i></div>    
+        <div class="w3-right">
+          <h3>{temperature}°C</h3>
+        </div>
+        <div class="w3-clear"></div>
+        <h4>Temperature</h4>
+      </div>
+    </div>
+    <div class="w3-quarter">
+      <div class="w3-container w3-deep-purple w3-padding-16">
+        <div class="w3-left"><i class="fa fa-wind w3-xxxlarge"></i></div>
+        <div class="w3-right">
+          <h3>{pressure} bar</h3>
+        </div>
+        <div class="w3-clear"></div>
+        <h4>Pressure</h4>
+      </div>
+    </div>
+    <div class="w3-quarter">
+      <div class="w3-container w3-amber w3-padding-16">
+        <div class="w3-left"><i class="fa-regular fa-sun w3-xxxlarge"></i></div>    
+        <div class="w3-right">
+          <h3>{light}%</h3>
+        </div>
+        <div class="w3-clear"></div>
+        <h4>Light</h4>
+      </div>
+    </div>
+  </div>
+  <div class="w3-row-padding w3-margin-bottom">
+    <div class="w3-quarter">
+      <div class="w3-container w3-teal w3-padding-16">
+        <div class="w3-left"><i class="fa fa-droplet w3-xxxlarge"></i></div>
+        <div class="w3-right">
+          <h3>{water1}%</h3>
+        </div>
+        <div class="w3-clear"></div>
+        <h4>Soil Moisture: <!-- dyn -->Pot 1</h4>
+      </div>
+    </div>
+    <div class="w3-quarter">
+      <div class="w3-container w3-blue-grey w3-text-white w3-padding-16">
+        <div class="w3-left"><i class="fa fa-droplet w3-xxxlarge"></i></div>
+        <div class="w3-right">
+          <h3>{water2}%</h3>
+        </div>
+        <div class="w3-clear"></div>
+        <h4>Soil Moisture: <!-- dyn -->Pot 2</h4>
+      </div>
+    </div>
+  </div>
+  <div class="w3-panel">
+    <div class="w3-row-padding" style="margin:0 -16px">
+      <div class="w3-twothird">
+        <h5>Logs</h5>
+        <table class="w3-table w3-striped w3-white">
+          <tr>
+            <td><i class="fa fa-droplet-slash w3-text-red"></i></td>
+            <td><span class="w3-text-red pad-right"> Low Soil Moisture — Pot 2 (15%)</span></td>
+            <td><i>15 mins</i></td>
+          </tr>
+          <tr>
+            <td><i class="fa fa-clock w3-text-blue w3-large"></i></td>
+            <td><i class="fa fa-thermometer-2"></i><span class="pad-right"> {temperature}°C</span><i class="fa fa-wind"></i><span class="pad-right"> {pressure} bar</span><i class="fa fa-droplet"></i><span class="pad-right"> Pot 1: {water1}%</span><i class="fa fa-droplet"></i><span class="pad-right"> Pot 2: {water2}%</span><i class="fa fa-sun"></i><span class="pad-right"> Light: {light}%</span></td>
+            <td><i>{hour}</i></td>
+          </tr>
+        </table>
+      </div>
+
+      <div class="w3-third">
+        <h5>Reminders
+        </h5>
+        <span>(None set)</span>
+      </div>
+      
+    </div>
+  </div>
+  <!-- Footer -->
+  <footer class="w3-container w3-padding-16 w3-light-grey">
+    <h4>FOOTER</h4>
+    <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
+  </footer>
+  <!-- End page content -->
+</div>
+<script>
+// Get the Sidebar
+var mySidebar = document.getElementById("mySidebar");
+
+// Get the DIV with overlay effect
+var overlayBg = document.getElementById("myOverlay");
+
+// Toggle between showing and hiding the sidebar, and add overlay effect
+function w3_open() {
+  if (mySidebar.style.display === 'block') {
+    mySidebar.style.display = 'none';
+    overlayBg.style.display = "none";
+  } else {
+    mySidebar.style.display = 'block';
+    overlayBg.style.display = "block";
+  }
+}
+// Close the sidebar with the close button
+function w3_close() {
+  mySidebar.style.display = "none";
+  overlayBg.style.display = "none";
+}
+</script>
+</body>
+</html>

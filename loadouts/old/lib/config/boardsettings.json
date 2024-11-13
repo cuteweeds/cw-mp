@@ -1,0 +1,32 @@
+{ "DEFAULT SETTINGS FOR RECOGNIZED MICROCONTROLLERS"
+	"PICO_W" : 
+	[
+		{"BOARD_LED_ON" :  "True"}
+		{"BOARD_LED_PIN" :  "LED"}
+		{"BLUETOOTH_ON" :  "True"}
+		{"BOARD_WIFI_ON" : "True"}
+	],
+	"PICO" : 
+	[
+		{"BOARD_LED_ON" :   "True"}
+		{"BOARD_LED_PIN" :      25}
+		{"BLUETOOTH_ON" :  "False"}
+		{"BOARD_WIFI_ON" : "False"}
+	],
+	"ESP8266" : 
+	[
+		{"BOARD_LED_ON" : "False"}
+		{"BOARD_LED_PIN" : "None"}
+		{"BLUETOOTH_ON" : "False"}
+		{"BOARD_WIFI_ON" : "True"}
+	],
+	"Unknown" : 
+	[
+		{"BOARD_LED_ON" : "False"}
+		{"BOARD_LED_PIN" : "None"}
+		{"BLUETOOTH_ON" :  "True"}
+		{"BOARD_WIFI_ON" : "True"}
+		{"BOARD_LED_ON" :  "True"}
+	]
+
+}
